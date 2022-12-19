@@ -6,3 +6,4 @@ allure-results
 .env
 examples
 jenkins.war
+.gitignore
