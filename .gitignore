@@ -1,0 +1,9 @@
+node_modules
+.idea
+allure-report
+allure-results
+.DS_Store
+.env
+examples
+jenkins.war
+.gitignore
