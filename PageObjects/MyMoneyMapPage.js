@@ -1,5 +1,5 @@
 import {BasePage} from "./Components/BasePage";
-import {openPage, URLS} from "../../helper/ui-helper";
+import {openPage, URLS} from "../helpers/ui/ui-helpers";
 
 class MyMoneyMapPage extends BasePage {
     // Page Elements

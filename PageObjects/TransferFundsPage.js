@@ -1,5 +1,5 @@
 import {BasePage} from "./Components/BasePage";
-import {openPage, URLS} from "../../helper/ui-helper";
+import { openPage, URLS } from "../helpers/ui/urls";
 
 class TransferFundsPage extends BasePage {
     // Page Elements

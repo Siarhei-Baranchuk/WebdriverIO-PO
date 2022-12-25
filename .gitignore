@@ -1,9 +1,10 @@
-node_modules
+/node_modules
 .idea
-allure-report
-allure-results
+/allure-report
+/allure-results
 .DS_Store
 .env
-examples
+/examples
 jenkins.war
 .gitignore
+.prettierrc

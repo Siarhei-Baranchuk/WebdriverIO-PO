@@ -4,9 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test2": "echo \"Error: no test specified\" && exit 1",
-    "test": "wdio run wdio.conf.js",
-    "start-jenkins-server": "java -jar jenkins.war -httpPort=8080 --enable-future-java"
+    "test-all": "wdio wdio.conf.js",
+    "test-ui": "wdio wdio.conf.js --suite ui",
+    "test-api": "wdio wdio.conf.js --suite api",
+
+    "jenkins-server": "java -jar jenkins.war -httpPort=8080 --enable-future-java",
+    "http-server": "http-server",
+
+    "test-iu-report": "npm run clean && wdio wdio.conf.js --suite ui && npm run report",
+    "test-api-report": "npm run clean && wdio wdio.conf.js --suite api && npm run report",
+    "test-all-report": "npm run clean && wdio wdio.conf.js && npm run report",
+    "report": "allure generate --clean",
+    "clean": "rimraf allure-results && rimraf allure-report"
   },
   "author": "",
   "license": "ISC",
@@ -14,14 +23,19 @@
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
+    "@faker-js/faker": "^7.6.0",
+    "@wdio/allure-reporter": "^8.0.13",
     "@wdio/cli": "^8.0.12",
     "@wdio/local-runner": "^8.0.12",
     "@wdio/mocha-framework": "^8.0.11",
     "@wdio/spec-reporter": "^8.0.11",
     "chromedriver": "^108.0.0",
+    "prettier": "^2.8.1",
     "wdio-chromedriver-service": "^8.0.1"
   },
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "rimraf": "^3.0.2"
   }
 }
